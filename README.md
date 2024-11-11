@@ -1,23 +1,12 @@
 # JAX-MPM
- 
-### requirements.txt
 
-```plaintext
-taichi==1.7.1
-matplotlib==3.5.2
-jax==0.4.13
-tk==0.1.0
-scipy==1.9.0
-imageio==2.34.2
-numpy==1.21.6
-```  
-
-### README.md
 
 ```markdown
 # Explicit MPM Simulation
 
 This repository contains an implementation of an explicit Material Point Method (MPM) simulation using Python and JAX. The script involves the use of Taichi, JAX, Matplotlib, and other scientific computing libraries to model the behavior of particles over time under gravity and other forces.
+
+This simulation focuses on the **dam break problem**, utilizing **explicit time integration**. However, it also has the potential for **implicit time integration** and **data assimilation** with the help of JAX. As we tested, the JAX-based MPM is as fast as some other packages, such as Taichi, while holding great potential for **deep learning** integration. We are still exploring these capabilities to unlock further improvements.
 
 ## Prerequisites
 
