@@ -73,9 +73,5 @@ The results are visualized in real time using Taichi's GUI module, and each fram
 - **mpm_simulation.py**: Main simulation script.
 - **test_300.mat**: Example particle data for running the simulation.
 
-## License
-
-This project is licensed under the MIT License.
-```
 
 If you have any questions or would like more information, feel free to reach out!
