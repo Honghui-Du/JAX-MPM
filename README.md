@@ -1,16 +1,5 @@
 # JAX-MPM
- 
-### requirements.txt
 
-```plaintext
-taichi==1.7.1
-matplotlib==3.5.2
-jax==0.4.13
-tk==0.1.0
-scipy==1.9.0
-imageio==2.34.2
-numpy==1.21.6
-```  
 
 ### README.md
 
