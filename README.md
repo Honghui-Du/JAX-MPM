@@ -46,9 +46,7 @@ The simulation will generate a series of images visualizing the particle movemen
 
 ## Code Structure
 
-- **Imports**: The script makes use of several numerical and visualization libraries to load particle data, perform computations, and display animations.
 - **Functions**:
-  - **polar\_decomposition\_2x2**: Performs a polar decomposition on a 2x2 matrix.
   - **pre\_compute**: Computes the base indices, relative positions, and weights of particles on the grid.
   - **p2g (Particle-to-Grid)**: Transfers particle data to the grid.
   - **grid\_op**: Performs operations on the grid, including applying forces and boundary conditions.
@@ -57,7 +55,7 @@ The simulation will generate a series of images visualizing the particle movemen
 
 ## Visualization
 
-The results are visualized in real time using Taichi's GUI module (not required), and each frame is saved to create an animated GIF. Additionally, Matplotlib is used to generate an animation of the particle movement, saved as `particle_animation.gif`.
+The results are visualized in real time using Taichi's GUI module (not required), and each frame is saved to create an animated GIF.
 
 ### Notes
 

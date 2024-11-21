@@ -64,26 +64,6 @@ init_v = np.zeros(dim)
 bound = 5
 # loss = np.zeros()
 
-@jit
-def polar_decomposition_2x2(A):
-    # Compute SVD
-    U, S, Vh = svd(A, full_matrices=False)
-    # Compute U and P from SVD
-    U_polar = np.matmul(U, Vh)
-    P = np.matmul(Vh.conj().T, np.diag(S) @ Vh)
-    return U_polar, P
-
-
-def batch_polar_svd(new_F):
-    u, p = jsl.polar(new_F, method='svd')
-    return u, p
-
-def batch_polar_qdwh(new_F):
-    u, p = jsl.polar(new_F, method='qdwh', max_iterations=5)
-    return u, p
-
-
-batch_polar = vmap(batch_polar_svd) 
 
 
 
