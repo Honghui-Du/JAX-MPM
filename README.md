@@ -61,7 +61,7 @@ The simulation will generate a series of images visualizing the particle movemen
 
 ## Visualization
 
-The results are visualized in real time using Taichi's GUI module, and each frame is saved to create an animated GIF. Additionally, Matplotlib is used to generate an animation of the particle movement, saved as `particle_animation.gif`.
+The results are visualized in real time using Taichi's GUI module (not required), and each frame is saved to create an animated GIF. Additionally, Matplotlib is used to generate an animation of the particle movement, saved as `particle_animation.gif`.
 
 ### Notes
 
