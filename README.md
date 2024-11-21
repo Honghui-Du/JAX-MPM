@@ -1,12 +1,8 @@
-# JAX-MPM
-
-
-```markdown
 # Explicit MPM Simulation
 
-This repository contains an implementation of an explicit Material Point Method (MPM) simulation using Python and JAX. The script involves the use of Taichi, JAX, Matplotlib, and other scientific computing libraries to model the behavior of particles over time under gravity and other forces.
+This repository contains an implementation of an explicit Material Point Method (MPM) simulation using Python and JAX. Specifically, MLS-MPM ([https://yzhu.io/publication/mpmmls2018siggraph/](https://yzhu.io/publication/mpmmls2018siggraph/)) is implemented.  Weakly incompressible viscous fluid with EOS equation for pressure is considered.
 
-This simulation focuses on the **dam break problem**, utilizing **explicit time integration**. However, it also has the potential for **implicit time integration** and **data assimilation** with the help of JAX. As we tested, the JAX-based MPM is as fast as some other packages, such as Taichi, while holding great potential for **deep learning** integration. We are still exploring these capabilities to unlock further improvements.
+This simulation focuses on the **dam break problem**, utilizing **explicit time integration**. However, it also has the potential for **implicit time integration** and **data assimilation** with the help of JAX. As we tested, the JAX-based MPM provides comparable computation speed with Taichi due to the JIT and batch operation for array, while holding great potential for **deep learning** integration. We are still exploring these capabilities to unlock further improvements.
 
 ## Prerequisites
 
@@ -52,10 +48,10 @@ The simulation will generate a series of images visualizing the particle movemen
 
 - **Imports**: The script makes use of several numerical and visualization libraries to load particle data, perform computations, and display animations.
 - **Functions**:
-  - **polar_decomposition_2x2**: Performs a polar decomposition on a 2x2 matrix.
-  - **pre_compute**: Computes the base indices, relative positions, and weights of particles on the grid.
+  - **polar\_decomposition\_2x2**: Performs a polar decomposition on a 2x2 matrix.
+  - **pre\_compute**: Computes the base indices, relative positions, and weights of particles on the grid.
   - **p2g (Particle-to-Grid)**: Transfers particle data to the grid.
-  - **grid_op**: Performs operations on the grid, including applying forces and boundary conditions.
+  - **grid\_op**: Performs operations on the grid, including applying forces and boundary conditions.
   - **g2p (Grid-to-Particle)**: Transfers grid data back to the particles.
 - **Simulation Loop**: A main loop (`substep`) updates the particles based on forces, stresses, and gravity.
 
@@ -70,8 +66,8 @@ The results are visualized in real time using Taichi's GUI module (not required)
 
 ### Files
 
-- **mpm_simulation.py**: Main simulation script.
-- **test_300.mat**: Example particle data for running the simulation.
-
+- **mpm\_simulation.py**: Main simulation script.
+- **test\_300.mat**: Example particle data for running the simulation.
 
 If you have any questions or would like more information, feel free to reach out!
+

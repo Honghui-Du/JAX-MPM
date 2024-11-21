@@ -110,7 +110,7 @@ def p2g(f: np.int32, F, v, x, C, grid_v_in, grid_m_in, base, fx, w):
 
     stress = - pressure  \
         - 2/3 * mu * np.trace(C, axis1=1, axis2=2)[:, None, None] * np.eye(3) \
-            + 2 * mu * C
+            +  mu * (C + C.transpose(0, 2, 1))
     
     stress = (-dt * 4  * p_vol_next[:, None, None] * inv_dh * inv_dh) * stress
     
@@ -182,7 +182,10 @@ def g2p(f: np.int32, grid_v_out, v, x, base, fx, w):
                 new_C += 4 * weight[:, None, None]  * (np.einsum('ij,ik->ijk', g_v, dpos) * inv_dh)
 
 
-    return new_v, x + dt * v, new_C
+    v = new_v
+    x = x + dt * v
+    C = new_C
+    return v, x, C
 
 
 
