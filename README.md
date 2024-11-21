@@ -1,6 +1,6 @@
 # Explicit MPM Simulation
 
-This repository contains an implementation of an explicit Material Point Method (MPM) simulation using Python and JAX. Specifically, MLS-MPM ([https://yzhu.io/publication/mpmmls2018siggraph/](https://yzhu.io/publication/mpmmls2018siggraph/)) is implemented.  Weakly incompressible viscous fluid with EOS equation for pressure is considered.
+This repository contains an implementation of an explicit Material Point Method (MPM) simulation using Python and JAX. Specifically, MLS-MPM ([https://yzhu.io/publication/mpmmls2018siggraph/](https://yzhu.io/publication/mpmmls2018siggraph/)) is implemented.  Weakly compressible viscous fluid with EOS equation for pressure is considered.
 
 This simulation focuses on the **dam break problem**, utilizing **explicit time integration**. However, it also has the potential for **implicit time integration** and **data assimilation** with the help of JAX. As we tested, the JAX-based MPM provides comparable computation speed with Taichi due to the JIT and batch operation for array, while holding great potential for **deep learning** integration. We are still exploring these capabilities to unlock further improvements.
 
