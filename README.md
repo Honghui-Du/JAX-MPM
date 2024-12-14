@@ -15,7 +15,6 @@ More examples and features (implicit time integration, inverse desgin, data assi
 
 To run the simulations, ensure that you have the following libraries installed:
 
-- Taichi
 - JAX
 - Matplotlib
 - Tkinter
