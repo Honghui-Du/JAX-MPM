@@ -6,8 +6,8 @@ This repository provides a suite of physics-based simulation tools using **JAX**
 
 - **Mass-Spring System (Cloth Simulation)**: Simulate cloth-like materials using a mass-spring system that captures realistic stretching and bending behaviors.
 - **Material Point Method (MPM)**:
-  - **2D Dam Break**: Weakly compressible viscous fluid simulation using the MPM approach, showcasing explicit time integration and the potential for implicit integration.
-  - **3D Dam Break**: Extend the dam break scenario into three dimensions, demonstrating the versatility and scalability of the MPM implementation.
+  - **2D Dam Break**: Weakly compressible viscous fluid simulation using the JAX-MPM approach, showcasing explicit time integration and the potential for implicit integration.
+  - **3D Dam Break**: Extend the dam break scenario into three dimensions, demonstrating the versatility and scalability of the JAX-MPM implementation.
 
 More examples and features (implicit time integration, inverse desgin, data assimilation) will be released in the future, expanding the repository’s capabilities to cover a wider range of physical scenarios.
 
